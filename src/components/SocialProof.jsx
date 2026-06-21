@@ -73,19 +73,14 @@ export default function SocialProof() {
           </div>
           <div className="proof__kol-grid">
             {[
-              { name: 'Thủy Tiên', role: 'Nghệ sĩ · Glamorosa Ambassador', placeholder: true },
-              { name: 'Lý Quí Khánh', role: 'Fashion Designer · Glamorosa Campaign', placeholder: true },
+              { name: 'Thủy Tiên', role: 'Nghệ sĩ · Glamorosa Ambassador', image: '/images/thuy_tien.jpg' },
+              { name: 'Lý Quí Khánh', role: 'Fashion Designer · Glamorosa Campaign', image: '/images/li_qui_khanh.jpg' },
             ].map((kol) => (
               <div key={kol.name} className="proof__kol-card">
-                <div className="proof__kol-avatar" aria-label={`Ảnh đại diện ${kol.name} – đang chờ xác nhận sử dụng`}>
-                  <span>{kol.name.charAt(0)}</span>
-                </div>
+                <img className="proof__kol-avatar" src={kol.image} alt={kol.name} />
                 <div className="proof__kol-info">
                   <div className="proof__kol-name">{kol.name}</div>
                   <div className="proof__kol-role">{kol.role}</div>
-                  {kol.placeholder && (
-                    <div className="proof__kol-placeholder">Hình ảnh chờ xác nhận từ CAO</div>
-                  )}
                 </div>
               </div>
             ))}

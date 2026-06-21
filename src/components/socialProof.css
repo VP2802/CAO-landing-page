@@ -151,16 +151,8 @@
   width: 52px;
   height: 52px;
   border-radius: var(--radius-full);
-  background: var(--color-gold-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: var(--fs-xl);
-  color: var(--color-charcoal);
-  font-weight: 400;
+  object-fit: cover;
   flex-shrink: 0;
-  position: relative;
 }
 
 .proof__kol-info {
