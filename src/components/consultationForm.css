@@ -1,0 +1,292 @@
+.form-section {
+  background: var(--color-bg-main);
+  position: relative;
+}
+
+.form-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: var(--gradient-gold);
+  opacity: 0.5;
+}
+
+/* Header */
+.form-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.form-header__title {
+  font-size: var(--fs-3xl);
+  color: var(--color-charcoal);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.form-header__title em {
+  color: var(--color-gold-dark);
+  font-style: italic;
+}
+
+.form-header__desc {
+  font-size: var(--fs-md);
+  color: var(--color-muted);
+  line-height: var(--lh-relaxed);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Form Layout */
+.consultation-form {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12);
+  border: var(--border-gold-thin);
+  box-shadow: var(--shadow-md);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.form-row--2 > * {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-group {
+  margin-bottom: var(--space-5);
+}
+
+/* Labels */
+.form-label {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.02em;
+}
+
+.form-required {
+  color: var(--color-gold-dark);
+}
+
+/* Inputs */
+.form-input {
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid rgba(201,169,110,0.25);
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-size: var(--fs-base);
+  transition: all var(--transition-base);
+  outline: none;
+  appearance: none;
+}
+
+.form-input:hover {
+  border-color: rgba(201,169,110,0.5);
+}
+
+.form-input:focus {
+  border-color: var(--color-gold);
+  background: var(--color-white);
+  box-shadow: 0 0 0 3px rgba(201,169,110,0.12);
+}
+
+.form-input::placeholder {
+  color: var(--color-muted-light);
+  font-style: italic;
+}
+
+.form-input--error {
+  border-color: #C0392B;
+  background: #FFF9F9;
+}
+
+.form-input--error:focus {
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.1);
+}
+
+/* Select */
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23C9A96E' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: var(--space-10);
+  cursor: pointer;
+}
+
+/* Textarea */
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Error message */
+.form-error {
+  display: block;
+  font-size: var(--fs-xs);
+  color: #C0392B;
+  margin-top: var(--space-2);
+  font-style: italic;
+}
+
+/* Method grid */
+.form-method-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.form-method-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid rgba(201,169,110,0.4);
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+  text-align: left;
+  font-size: var(--fs-base);
+  color: var(--color-muted);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.form-method-card:hover {
+  border-color: var(--color-gold);
+  color: var(--color-charcoal);
+  background: rgba(201,169,110,0.05);
+}
+
+.form-method-card--active {
+  border-color: var(--color-gold);
+  background: rgba(201,169,110,0.08);
+  color: var(--color-charcoal);
+  box-shadow: 0 0 0 1px rgba(201,169,110,0.4);
+}
+
+.form-method-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201,169,110,0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-gold-dark);
+  flex-shrink: 0;
+}
+
+/* Privacy note */
+.form-privacy {
+  font-size: var(--fs-xs);
+  color: var(--color-muted-light);
+  font-style: italic;
+  margin-bottom: var(--space-5);
+  line-height: var(--lh-normal);
+}
+
+/* Submit */
+.form-submit {
+  width: 100%;
+  padding: var(--space-5) var(--space-8);
+  font-size: var(--fs-base);
+  margin-bottom: var(--space-3);
+  position: relative;
+}
+
+.form-submit--loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.form-submit-desc {
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--color-muted-light);
+  font-style: italic;
+}
+
+/* Spinner */
+.form-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(31,34,37,0.3);
+  border-top-color: var(--color-charcoal);
+  border-radius: var(--radius-full);
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success state */
+.form-success {
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: var(--border-gold-thin);
+  box-shadow: var(--shadow-md);
+}
+
+.form-success__icon {
+  color: var(--color-gold);
+  margin-bottom: var(--space-6);
+  animation: successPop 0.5s var(--transition-spring) both;
+}
+
+.form-success__icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+@keyframes successPop {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.form-success__title {
+  font-size: var(--fs-3xl);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-5);
+}
+
+.form-success__desc {
+  font-size: var(--fs-md);
+  color: var(--color-muted);
+  line-height: var(--lh-relaxed);
+  max-width: 480px;
+  margin: 0 auto var(--space-4);
+}
+
+.form-success__sub {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-gold-dark);
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-8);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .consultation-form {
+    padding: var(--space-8) var(--space-5);
+  }
+}
